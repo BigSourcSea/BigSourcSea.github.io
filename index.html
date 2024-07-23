@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT丐帮</title>
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #f4f4f9;
+            color: #333;
+            padding: 1rem 2rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #666;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .hero {
+            background: url('images/hero-image.jpg') no-repeat center center/cover;
+            height: 30vh;
+            margin-bottom: 2rem;
+            padding: 2rem 2rem; /* Align padding with section */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .hero h2 {
+            font-size: 2rem; /* Match section h2 size */
+            font-weight: 300;
+            color: #333;
+            margin: 0;
+            line-height: 1.4; /* Match section line-height */
+        }
+        .section {
+            padding: 2rem 2rem; /* Match hero padding */
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .portfolio-category {
+            margin-bottom: 2rem;
+        }
+        .portfolio-category h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        .portfolio-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .portfolio-item img {
+            width: 324px;
+            height: 200px;
+            margin-right: 1rem;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+        }
+        .portfolio-item .overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 60px;
+            background: url('images/overlay-image.png') no-repeat center center/contain;
+            transform: rotate(-15deg);
+            border-radius: 8px;
+            z-index: 10;
+        }
+        .portfolio-item div {
+            max-width: calc(100% - 344px);
+        }
+        .portfolio-item h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+        }
+        .portfolio-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .floating-menu {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: #ddd; /* Changed to gray */
+            color: #333; /* Adjusted text color for contrast */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+        }
+        .floating-menu a {
+            display: block;
+            color: #333; /* Adjusted text color for better contrast */
+            text-decoration: none;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ICT丐帮</h1>
+        <p>腹黑joker合作社</p>
+        <nav>
+            <ul>
+                <li><a href="#about">首页</a></li>
+                <li><a href="#portfolio">地址</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="about">
+            <h2>关于我们</h2>
+            <p>你好！我们是ICT服务器的一个团体，常年招新！<a href="#contact">详情可点击此处联系我们</a></p>
+        </section>
+        
+        <section class="section" id="portfolio">
+            <h2>地址</h2>
+            
+            <div class="portfolio-category" id="category1">
+                <h3>工业</h3>
+                <div class="portfolio-item">
+                    <img src="images/工业/1.png" alt="工业 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>炸头机</h3>
+                        <p>主世界坐标 -15166 162 -4485</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/工业/2.png" alt="工业 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>新村民繁殖+交易</h3>
+                        <p>主世界坐标 -15020 120 -4489</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/工业/99.png" alt="工业 99">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>凋零骷髅塔刷怪点(较远建议走传送门)</h3>
+                        <p>主世界坐标 5702 251 31268</p>
+                    </div>
+                </div>
+				
+				<h1>收集中，未完工...</h1></br></br></br>
+            </div>
+            <div class="portfolio-category" id="category2">
+                <h3>基地</h3>
+                <div class="portfolio-item">
+                    <img src="images/基地/1.png" alt="基地 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>炸树场</h3>
+                        <p>主世界坐标 -14296 63 -5094</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/基地/2.png" alt="基地 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>苦力怕农场</h3>
+                        <p>主世界坐标 -14317 63 -4626</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/3.png" alt="基地 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>刷石机</h3>
+                        <p>主世界坐标 -14292 63 -5079</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/4.png" alt="基地 4">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮仓库</h3>
+                        <p>主世界坐标 -14266 63 -5076</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/5.png" alt="基地 5">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>刷线机</h3>
+                        <p>主世界坐标 -14265 62 -5049</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/6.png" alt="基地 6">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>村民繁殖+交易(暂时)</h3>
+                        <p>主世界坐标 -14276 63 -5059</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/7.png" alt="基地 7">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>刷铁机</h3>
+                        <p>主世界坐标 -14296 63 -5070</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/8.png" alt="基地 8">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>苔藓块骨粉机</h3>
+                        <p>主世界坐标 -14312 63 -5066</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/9.png" alt="基地 9">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>熔炉组</h3>
+                        <p>主世界坐标 -14305 63 -5079</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/10.png" alt="基地 10">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>种植部分</h3>
+                        <p>主世界坐标 -14266 63 -5097</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/11.png" alt="基地 11">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>炼药机</h3>
+                        <p>主世界坐标 -14271 63 -5091</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/12.png" alt="基地 12">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>刷怪塔</h3>
+                        <p>主世界坐标 -14302 63 -4869</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/13.png" alt="基地 13">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>女巫塔</h3>
+                        <p>主世界坐标 -14733 56 -5017</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/基地/14.png" alt="基地 14">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>刷铁轨机</h3>
+                        <p>主世界坐标 -14283 63 -5081</p>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="portfolio-category" id="category3">
+                <h3>地狱</h3>
+                <div class="portfolio-item">
+                    <img src="images/地狱/1.png" alt="地狱 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>蛙明灯农场</h3>
+                        <p>地狱坐标 -1714 128 -538</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/地狱/2.png" alt="地狱 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>猪灵交易</h3>
+                        <p>地狱坐标 -1863 128 -543</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/地狱/3.png" alt="地狱 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮私用疣猪兽农场</h3>
+                        <p>地狱坐标 -1859 128 -798</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/地狱/4.png" alt="地狱 4">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮私用杀凋机</h3>
+                        <p>地狱坐标 -1838 128 -670</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/地狱/5.png" alt="地狱 5">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>蜜蜂农场(1)</h3>
+                        <p>地狱坐标 -1991 128 -963</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/地狱/6.png" alt="地狱 6">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>蜜蜂农场(2)</h3>
+                        <p>地狱坐标 -1786 128 -633</p>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="portfolio-category" id="category4">
+                <h3>末地</h3>
+                <div class="portfolio-item">
+                    <img src="images/末地/1.png" alt="末地 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮刷沙机</h3>
+                        <p>主世界坐标 -17470 25 -2508</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/末地/2.png" alt="末地 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮小黑塔(应该是这个)</h3>
+                        <p>末地坐标 236 1 133</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/末地/3.png" alt="末地 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>公用小黑塔(应该是公用)</h3>
+                        <p>末地坐标 0 2 -246</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/末地/1.png" alt="末地 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮刷沙机</h3>
+                        <p>主世界坐标 -17470 25 -2508</p>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="portfolio-category" id="category5">
+                <h3>建筑</h3>
+                <div class="portfolio-item">
+                    <img src="images/建筑/1.png" alt="建筑 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮的家(建设中)</h3>
+                        <p>主世界坐标 -15171 107 -5813</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/建筑/2.png" alt="建筑 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>宣传片打卡点</h3>
+                        <p>主世界坐标 -14125 71 -4798</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/建筑/3.png" alt="建筑 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>红石音乐</h3>
+                        <p>主世界坐标 -14307 63 -4755</p>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="portfolio-category" id="category6">
+                <h3>传送门</h3>
+                <div class="portfolio-item">
+                    <img src="images/传送门/1.png" alt="传送门 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>基地(地狱)</h3>
+                        <p>地狱坐标 -1784 129 -637</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/传送门/2.png" alt="传送门 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>基地(主世界)</h3>
+                        <p>主世界坐标 -14288 63 -5062</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/传送门/3.png" alt="传送门 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>建筑(地狱)</h3>
+                        <p>地狱坐标 -1898 129 -733</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/传送门/4.png" alt="传送门 4">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>建筑(主世界)</h3>
+                        <p>主世界坐标 -15164 107 -5811</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/传送门/5.png" alt="传送门 5">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>工业(地狱)</h3>
+                        <p>地狱坐标 -1875 129 -561</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/传送门/6.png" alt="传送门 6">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>工业(主世界)</h3>
+                        <p>主世界坐标 -15000 121 -4489</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/传送门/7.png" alt="传送门 7">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>凋零骷髅塔(地狱)</h3>
+                        <p>地狱坐标 684 172 3910</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/传送门/8.png" alt="传送门 8">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>凋零骷髅塔(主世界)</h3>
+                        <p>主世界坐标 5440 521 31268</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/传送门/9.png" alt="传送门 9">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮末地(地狱)</h3>
+                        <p>地狱坐标 -2183 129 -313</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/传送门/10.png" alt="传送门 10">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>丐帮末地(主世界)</h3>
+                        <p>主世界坐标 -17470 25 -2512</p>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="portfolio-category" id="category7">
+                <h3>商业区</h3>
+                <div class="portfolio-item">
+                    <img src="images/商业区/1.png" alt="商业区 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>商店(主城)</h3>
+                        <p>主世界坐标 </br>输入 /warp 主城 快速返回主城</p>
+                    </div>
+                </div>
+				
+            </div>
+            <div class="portfolio-category" id="category8">
+                <h3>SourcSea特别提供</h3>
+                <div class="portfolio-item">
+                    <img src="images/特别提供/1.png" alt="特别提供 1">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>SourcSea家(地狱)</h3>
+                        <p>地狱坐标 -452 128 1158</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/特别提供/2.png" alt="特别提供 2">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>SourcSea家</h3>
+                        <p>主世界坐标 -3698 95 9207</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/特别提供/3.png" alt="特别提供 3">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>SourcSea家全满级附魔交易所</h3>
+                        <p>主世界坐标 -3695 95 9171</p>
+                    </div>
+                </div>
+				<div class="portfolio-item">
+                    <img src="images/特别提供/4.png" alt="特别提供 4">
+                    <div class="overlay"></div>
+                    <div>
+                        <h3>SourcSea小摊(主城)</h3>
+                        <p>主世界坐标 92 72 295</br>输入 /warp 主城 快速返回主城</p>
+                    </div>
+                </div>
+				
+            </div>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>联系我们</h2>
+            <p>如果你喜欢我们可以添加QQ:2805537396</br>有任何关于此网站的建议(包括但不限于：设计风格；增加新机器、建筑等)可联系QQ:752496633</p>
+        </section>
+    </div>
+    
+    <div class="floating-menu">
+        <a href="#category1">工业</a>
+        <a href="#category2">基地</a>
+		<a href="#category3">地狱</a>
+        <a href="#category4">末地</a>
+        <a href="#category5">建筑</a>
+		<a href="#category6">传送门</a>
+		<a href="#category7">商业区</a>
+		<a href="#category8">SourcSea特别提供</a>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 SourcSea个人制作. 保留所有权利.</p>
+    </footer>
+</body>
+</html>

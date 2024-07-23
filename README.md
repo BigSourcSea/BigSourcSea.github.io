@@ -1,2 +1,2 @@
-# BigSourcSea.github.io
-ICT丐帮的网站
+你好我是源海，代码新手
+此网站为我的世界ICT服务器的丐帮制作
