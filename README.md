@@ -1,2 +1,3 @@
-你好我是源海，代码新手
-此网站为我的世界ICT服务器的丐帮制作
+hi, I am SourcSea.
+A new programmer.
+This project was made for the 丐帮 of ICT servers
